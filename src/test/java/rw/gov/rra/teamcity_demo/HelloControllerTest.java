@@ -22,4 +22,12 @@ class HelloControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Built by TeamCity! - message updated"));
     }
+
+    @Test
+    void healthReturnsOk() throws Exception {
+        mockMvc.perform(get("/health"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("OK"));
+    }
+
 }

@@ -10,4 +10,9 @@ public class HelloController {
     public String hello() {
         return "Built by TeamCity! - message updated";
     }
+
+    @GetMapping("/health")
+    public String health() {
+        return "OK";
+    }
 }
