@@ -20,6 +20,6 @@ class HelloControllerTest {
     void helloReturnsMessage() throws Exception {
         mockMvc.perform(get("/hello"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Built by TeamCity!"));
+                .andExpect(content().string("Built by TeamCity! - message updated"));
     }
 }

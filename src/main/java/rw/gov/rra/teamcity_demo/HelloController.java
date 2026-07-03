@@ -8,6 +8,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Built by TeamCity!";
+        return "Built by TeamCity! - message updated";
     }
 }
