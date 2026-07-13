@@ -15,4 +15,9 @@ public class HelloController {
     public String health() {
         return "OK";
     }
+
+    @GetMapping("/version")
+    public String version() {
+        return "1.0.0";
+    }
 }

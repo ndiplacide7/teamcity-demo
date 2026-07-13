@@ -30,4 +30,11 @@ class HelloControllerTest {
                 .andExpect(content().string("OK"));
     }
 
+    @Test
+    void versionReturnsVersion() throws Exception {
+        mockMvc.perform(get("/version"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("1.0.0"));
+    }
+
 }
